@@ -33,6 +33,6 @@ export class Services {
   }
 
   findUser(id: string | number): Array<IUser> {
-    return users.find((user: IUser) => user.code === id);
+    return users.filter((user: IUser) => user.code == id);
   }
 }

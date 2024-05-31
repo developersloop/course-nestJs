@@ -29,7 +29,7 @@ export class UsersController {
       'id',
       new ParseIntPipe({ errorHttpStatusCode: HttpStatus.NOT_ACCEPTABLE }),
     )
-    { id }: { id: number },
+    id: number,
   ): Promise<Array<IUser>> {
     try {
       return response.status(200).json(this.services.findUser(id));
